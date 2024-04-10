@@ -1,0 +1,19 @@
+{
+  "name": "cloudwalk-quakelog-parser",
+  "version": "1.0.0",
+  "description": " Quake log parser built for Cloudwalk's SDET application",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucasMig/cloudwalk-quakelog-parser.git"
+  },
+  "author": "Lucas Migliori",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucasMig/cloudwalk-quakelog-parser/issues"
+  },
+  "homepage": "https://github.com/LucasMig/cloudwalk-quakelog-parser#readme"
+}
