@@ -1,11 +1,11 @@
-import {
+const {
   extractKillData,
   extractPlayerName,
   newGame,
-} from "../settings/utils.js";
-import { processKillEvent } from "./processKillEvent.js";
+} = require("../settings/utils.js");
+const { processKillEvent } = require("./processKillEvent.js");
 
-export function parseMatchData(lines) {
+function parseMatchData(lines) {
   const matches = {};
   let currentMatchData = null;
   let matchCount = 1;
@@ -38,3 +38,5 @@ export function parseMatchData(lines) {
 
   return matches;
 }
+
+module.exports = { parseMatchData };
