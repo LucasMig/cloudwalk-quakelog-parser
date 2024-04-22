@@ -1,5 +1,7 @@
 import { parseMatchData } from "./parser/parseMatchData.js";
 import fs from "fs";
+import { reportMatchInfo } from "./reporter/reportMatchInfo.js";
+import { reportDeathCauses } from "./reporter/reportDeathCauses.js";
 
 const quakeLog = "../public/qgames.log";
 const testLog = "../public/sample.log";
@@ -23,7 +25,8 @@ async function main(logPath) {
   try {
     const lines = await readLogFile(logPath);
     const matches = parseMatchData(lines);
-
+    reportMatchInfo(matches);
+    // reportDeathCauses(matches);
     const jsonData = JSON.stringify(matches, null, 2);
     fs.writeFileSync(outputPath, jsonData);
     console.log(`Parsed data saved to ${outputPath}`);
@@ -32,4 +35,4 @@ async function main(logPath) {
   }
 }
 
-main(quakeLog);
+main(testLog);

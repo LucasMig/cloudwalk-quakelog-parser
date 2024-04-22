@@ -26,7 +26,7 @@ export function parseMatchData(lines) {
       (currentMatchData && line.includes("InitGame:"))
     ) {
       currentMatchData.players = [...new Set(currentMatchData.players)];
-      matches[`game_ ${matchCount}`] = currentMatchData;
+      matches[`game_${matchCount}`] = currentMatchData;
       matchCount++;
       currentMatchData = null;
     }
