@@ -2,10 +2,9 @@
   "name": "cloudwalk-quakelog-parser",
   "version": "1.0.0",
   "description": " Quake log parser built for Cloudwalk's SDET application",
-  "type": "module",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -16,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/LucasMig/cloudwalk-quakelog-parser/issues"
   },
-  "homepage": "https://github.com/LucasMig/cloudwalk-quakelog-parser#readme"
+  "homepage": "https://github.com/LucasMig/cloudwalk-quakelog-parser#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }

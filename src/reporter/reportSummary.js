@@ -1,6 +1,6 @@
-import { rankObjEntries } from "../settings/utils.js";
+const { rankObjEntries } = require("../settings/utils.js");
 
-export function reportSummary(jsonData, dataKey) {
+function reportSummary(jsonData, dataKey) {
   const matches = Object.entries(jsonData);
 
   matches.forEach(([match, data]) => {
@@ -21,3 +21,5 @@ export function reportSummary(jsonData, dataKey) {
 ${tableHeader}${tableBody}${tableFooter}\n`);
   });
 }
+
+module.exports = { reportSummary };

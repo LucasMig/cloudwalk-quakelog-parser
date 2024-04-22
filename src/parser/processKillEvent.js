@@ -1,4 +1,4 @@
-export function processKillEvent(currentMatchData, killData) {
+function processKillEvent(currentMatchData, killData) {
   const { killer, victim, means } = killData;
   const dto = { ...currentMatchData };
 
@@ -21,3 +21,5 @@ export function processKillEvent(currentMatchData, killData) {
   dto.total_kills += 1;
   return dto;
 }
+
+module.exports = { processKillEvent };

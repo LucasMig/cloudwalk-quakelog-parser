@@ -1,6 +1,6 @@
-import { parseMatchData } from "./parser/parseMatchData.js";
-import fs from "fs";
-import { reportSummary } from "./reporter/reportSummary.js";
+const fs = require("fs");
+const { parseMatchData } = require("./parser/parseMatchData.js");
+const { reportSummary } = require("./reporter/reportSummary.js");
 
 const quakeLog = "../public/qgames.log";
 const testLog = "../public/sample.log";
@@ -34,4 +34,4 @@ async function main(logPath) {
   }
 }
 
-main(testLog);
+main(quakeLog);
