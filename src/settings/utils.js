@@ -24,6 +24,6 @@ export function extractPlayerName(line) {
   return playerNameMatch ? playerNameMatch[1] : "";
 }
 
-export function rankPlayersByKills(kills) {
+export function rankObjEntries(kills) {
   return Object.entries(kills).sort((a, b) => b[1] - a[1]);
 }

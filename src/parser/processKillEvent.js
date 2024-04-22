@@ -14,6 +14,10 @@ export function processKillEvent(currentMatchData, killData) {
     killerHasKills ? (dto.kills[killer] += 1) : (dto.kills[killer] = 1);
   }
 
+  dto.kills_by_means[means]
+    ? (dto.kills_by_means[means] += 1)
+    : (dto.kills_by_means[means] = 1);
+
   dto.total_kills += 1;
   return dto;
 }

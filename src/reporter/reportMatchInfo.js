@@ -1,10 +1,10 @@
-import { rankPlayersByKills } from "../settings/utils.js";
+import { rankObjEntries } from "../settings/utils.js";
 
 export function reportMatchInfo(jsonData) {
   const matches = Object.entries(jsonData);
 
   matches.forEach(([match, data]) => {
-    const playerRanking = rankPlayersByKills(data.kills);
+    const playerRanking = rankObjEntries(data.kills);
 
     const tableHeader = `+--------------+------------+\n|        Leaderboard        |\n+--------------+------------+\n`;
     const tableBody = playerRanking.reduce((acc, record, i) => {
@@ -15,11 +15,9 @@ export function reportMatchInfo(jsonData) {
     }, "");
     const tableFooter = "+--------------+------------+";
 
-    console.log(`===== Summary for ${match} =====\n
+    console.log(`===== Match summary for ${match} =====\n
 > Match ended with ${data.total_kills} kills in total.
 
-${tableHeader}${tableBody}${tableFooter}
-
-==============================`);
+${tableHeader}${tableBody}${tableFooter}\n`);
   });
 }
