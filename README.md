@@ -14,10 +14,11 @@ cd cloudwalk-quakelog-parser
 To run the parser, you need to have Node.js installed. Then, you can simply run the entry point file:
 
 ```bash
+cd src
 node main.js
 ```
 
-The parser will read the log file located at `./public/games.log` and will output the JSON file at `./public/parsedMatches.json`.
+The parser will read the log file located at `./public/qgames.log` and will output the JSON file at `./public/parsedMatches.json`.
 
 It will also print two types of reports to the console: a general match report with players ranked by score, and a death cause report with the number of deaths caused by each reason.
 
